@@ -1,2 +1,2 @@
 # Kiela-mancala
-"Kiela Mancala: A Cultural Puzzle and Peaceful Mindsport"  Explore the traditional game of Kiela, cherished by the Kimbundu-speaking community in northern Angola, residing near Grandos Lagos and Alto Zambeze. 
+"Kiela Mancala: A Cultural Puzzle and Peaceful Mindsport"  Explore the traditional game of Kiela, cherished by the Kimbundu-speaking community in northern Angola, residing near Grandos Lagos and Alto Zambeze. The name "Kiela" itself means "puzzle" or "mindsport," reflecting the game's intriguing nature. Dive into this rich cultural experience, as Kiela is not just a game but an integral part of oral literature, known for its unique ability to foster peace by turning adversaries into friends.
