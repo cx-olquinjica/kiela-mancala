@@ -8,19 +8,57 @@
   <meta name="description" content="Play the traditional game of Kiela from Angola">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="kiela.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD"
+    crossorigin="anonymous">
   <!-- You can link to your Kiela-specific CSS file here -->
 </head>
-
+ 
 <body>
   <div class="game-container">
-    <!-- Game Board -->
+    <!-- Control Box - Taken from the original HTML -->
+    <div class="control-box">
+      <p id="server-message"></p>
+      <form class="pure-form center">
+        <fieldset>
+          <legend id="title">Play Kiela!</legend>
+          <label for="agent_speed">
+            Agent Speed
+            <input id="agent_speed" type="range" min="0" max="495" step="1" value="250"/>
+          </label>
+          <button class="pure-button pure-button-primary" id="btn-restart-game">Restart Game</button>
+          <label for="auto-restart">
+            <input id="auto-restart" type="checkbox"> Auto-Restart
+          </label>
+        </fieldset>
+      </form>
+      <div class="pure-g">
+        <div class="pure-u-1-2 player_box">
+          <h2 class="center player_one_text">Player One</h2>
+          <h2 class="center"><span id="player_one_score">0</span></h2>
+          <div class="form-wrapper">
+            <form class="pure-form" id="player_one_choices">
+            </form>
+          </div>
+        </div>
+        <div class="pure-u-1-2 player_box">
+          <h2 class="center player_two_text">Player Two</h2>
+          <h2 class="center"><span id="player_two_score">0</span></h2>
+          <div class="form-wrapper">
+            <form class="pure-form" id="player_two_choices">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Game Board - Kiela's Game Board Layout -->
     <div class="game-board">
       <!-- Row 1 - Player Two's inner row -->
       <div class="row player-two-inner-row">
-        <div class="hole stone"></div>
-        <div class="hole stone"></div>
-        <div class="hole stone"></div>
-        <div class="hole stone"></div>
+        <div class="hole seed seed-animation active-hole"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
         <div class="hole seed"></div>
         <div class="hole seed"></div>
         <div class="hole seed"></div>
@@ -69,48 +107,14 @@
       </div>
     </div>
     <!-- Game Board -->
-
-    <div class="control-panel">
-      <h1 class="game-title">Play Kiela</h1>
-      <p id="game-info">Instructions and game information go here.</p>
-
-      <div class="player-info">
-        <div class="player-box" id="player-one-box">
-          <h2 class="player-name">Player One</h2>
-          <h2 class="player-score" id="player-one-score">0</h2>
-          <!-- Customize the player information and choices for Kiela -->
-          <!-- Example: Add Kiela-specific player actions and choices here -->
-        </div>
-
-        <div class="player-box" id="player-two-box">
-          <h2 class="player-name">Player Two</h2>
-          <h2 class="player-score" id="player-two-score">0</h2>
-          <!-- Customize the player information and choices for Kiela -->
-          <!-- Example: Add Kiela-specific player actions and choices here -->
-        </div>
-      </div>
-
-      <form class="game-options">
-        <fieldset>
-          <legend>Game Options</legend>
-          <label for="game-speed">
-            Game Speed
-            <input id="game-speed" type="range" min="0" max="10" step="1" value="5">
-          </label>
-
-          <button class="game-button" id="btn-restart-game">Restart Game</button>
-
-          <label for="auto-restart">
-            <input id="auto-restart" type="checkbox"> Auto-Restart
-          </label>
-        </fieldset>
-      </form>
-    </div>
   </div>
-
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bluebird/3.4.7/bluebird.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.23.0/ramda.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.4.3/velocity.min.js"></script>
   <script src="kiela.js"></script>
   <!-- Include your Kiela-specific JavaScript file here -->
 </body>
-
 </html>

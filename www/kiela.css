@@ -21,7 +21,7 @@ body, h1, p {
   align-items: center;
   background-color: #00BFFF; /* Background color for the game board */
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 /* Style for rows and holes */
@@ -42,34 +42,7 @@ body, h1, p {
   align-items: center;
   font-weight: bold;
   font-size: 20px; /* Increased font size */
-}
-
-/* Add one stone in the inner row for each player */
-.player-one-inner-row .hole.stone::before,
-.player-two-inner-row .hole.stone::before {
-  content: '\2022'; /* Unicode bullet character to represent a stone */
-  font-size: 30px; /* Adjust the size as needed */
-  color: #333; /* Stone color */
-  display: block;
-  text-align: center;
-  line-height: 60px; /* Center vertically */
-}
-
-/* Hide the seed content in inner rows */
-.player-one-inner-row .hole.seed::before,
-.player-two-inner-row .hole.seed::before {
-  content: '';
-}
-
-/* Style for stones and seeds */
-.stone {
-  background-color: #333; /* Color for stones */
-  color: #FFF;
-}
-
-.seed {
-  background-color: #8BC34A; /* Color for seeds */
-  color: #333;
+  position: relative; /* Added position property for proper placement of seeds */
 }
 
 /* Style for player information */
@@ -112,7 +85,7 @@ body, h1, p {
   border: 2px solid #F44336; /* Red border for active holes */
 }
 
-/* Example: Style for rearranging stones in expert mode */
+/* Example: Style for rearranging seeds in expert mode */
 .rearrange-mode .hole {
   cursor: pointer;
   transition: background-color 0.3s;
@@ -133,4 +106,93 @@ body, h1, p {
   100% {
     transform: scale(1);
   }
+}
+
+
+
+
+
+
+#title {
+  font-size: 2em;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+p.box {
+  height: 28vh;
+  padding-top: 2vh;
+  text-align: center;
+  border-radius: 0.4em;
+  border: 1px solid grey;
+  margin: 1vh;
+  word-wrap: break-word;
+  font-size: 90%;
+}
+
+p.player_one {
+  background-image: radial-gradient(rgba(222, 222, 222, 0), rgba(33, 174, 255, 0.53) 96%);
+}
+
+p.player_two {
+  background-image: radial-gradient(rgba(222, 222, 222, 0), rgba(255, 0, 0, 0.53) 96%);
+}
+
+p.player_turn {
+  outline: none;
+  height: 12vh;
+  padding-top: 13.5vh;
+  font-size: 170%;
+  font-weight: bold;
+  margin: 0;
+}
+
+p.hide {
+  visibility: hidden;
+}
+
+div.control-box {
+  height: 98vh;
+  overflow: scroll;
+}
+
+.player_box {
+  outline: 1px grey solid;
+}
+.player_one_text {
+  color: rgba(33, 174, 255, 0.93);
+}
+.player_two_text {
+  color: rgba(255, 0, 0, 0.93);
+}
+
+div.form-wrapper {
+  padding: 0.5em;
+}
+
+h4 {
+  margin-top: 0.2em;
+  margin-bottom: 0.05em;
+}
+
+p.player-label {
+  margin: 0.2em;
+}
+
+.progress-container {
+  padding-top: 0.25em;
+}
+div.progress-bar {
+  background: #ff7b00;
+  width: 0%;
+  height: 1em;
+  border-radius: 0.4em;
+}
+
+input#agent_speed {
+  width: 90%;
+}
+
+.center {
+  text-align: center;
 }
