@@ -1,0 +1,136 @@
+/* Reset some default styles */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set up the game container */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #F5F5F5; /* Background color for the game container */
+}
+
+/* Style for the game board */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #00BFFF; /* Background color for the game board */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Style for rows and holes */
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0; /* Increased margin for spacing */
+}
+
+.hole {
+  width: 60px; /* Increased hole size */
+  height: 60px; /* Increased hole size */
+  border: 2px solid #333;
+  background-color: #FAFAD2; /* Default color for holes */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px; /* Increased font size */
+}
+
+/* Add one stone in the inner row for each player */
+.player-one-inner-row .hole.stone::before,
+.player-two-inner-row .hole.stone::before {
+  content: '\2022'; /* Unicode bullet character to represent a stone */
+  font-size: 30px; /* Adjust the size as needed */
+  color: #333; /* Stone color */
+  display: block;
+  text-align: center;
+  line-height: 60px; /* Center vertically */
+}
+
+/* Hide the seed content in inner rows */
+.player-one-inner-row .hole.seed::before,
+.player-two-inner-row .hole.seed::before {
+  content: '';
+}
+
+/* Style for stones and seeds */
+.stone {
+  background-color: #333; /* Color for stones */
+  color: #FFF;
+}
+
+.seed {
+  background-color: #8BC34A; /* Color for seeds */
+  color: #333;
+}
+
+/* Style for player information */
+.player-box {
+  text-align: center;
+  margin: 0 20px; /* Increased margin for player boxes */
+}
+
+.player-name {
+  font-size: 24px; /* Increased font size */
+  margin-bottom: 10px; /* Increased margin */
+}
+
+.player-score {
+  font-size: 32px; /* Increased font size */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for game options */
+.game-options {
+  margin: 20px; /* Increased margin */
+  text-align: center;
+}
+
+/* Style for game buttons */
+.game-button {
+  background-color: #333;
+  color: #FFF;
+  border: none;
+  border-radius: 4px;
+  padding: 15px 30px; /* Increased button size */
+  cursor: pointer;
+}
+
+/* Additional styling as needed */
+
+/* Example: Style for active or selected holes */
+.active-hole {
+  border: 2px solid #F44336; /* Red border for active holes */
+}
+
+/* Example: Style for rearranging stones in expert mode */
+.rearrange-mode .hole {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Example: Style for seed animations */
+.seed-animation {
+  animation: growSeed 0.5s linear infinite;
+}
+
+@keyframes growSeed {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

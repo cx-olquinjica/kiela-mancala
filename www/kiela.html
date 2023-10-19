@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Kiela Game</title>
+  <meta name="description" content="Play the traditional game of Kiela from Angola">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="kiela.css">
+  <!-- You can link to your Kiela-specific CSS file here -->
+</head>
+
+<body>
+  <div class="game-container">
+    <!-- Game Board -->
+    <div class="game-board">
+      <!-- Row 1 - Player Two's inner row -->
+      <div class="row player-two-inner-row">
+        <div class="hole stone"></div>
+        <div class="hole stone"></div>
+        <div class="hole stone"></div>
+        <div class="hole stone"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+      </div>
+      <!-- Row 2 - Player Two's outer row -->
+      <div class="row player-two-outer-row">
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+      </div>
+      <!-- Row 3 - Player One's outer row -->
+      <div class="row player-one-outer-row">
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+      </div>
+      <!-- Row 4 - Player One's inner row -->
+      <div class="row player-one-inner-row">
+        <div class="hole stone"></div>
+        <div class="hole stone"></div>
+        <div class="hole stone"></div>
+        <div class="hole stone"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+        <div class="hole seed"></div>
+      </div>
+    </div>
+    <!-- Game Board -->
+
+    <div class="control-panel">
+      <h1 class="game-title">Play Kiela</h1>
+      <p id="game-info">Instructions and game information go here.</p>
+
+      <div class="player-info">
+        <div class="player-box" id="player-one-box">
+          <h2 class="player-name">Player One</h2>
+          <h2 class="player-score" id="player-one-score">0</h2>
+          <!-- Customize the player information and choices for Kiela -->
+          <!-- Example: Add Kiela-specific player actions and choices here -->
+        </div>
+
+        <div class="player-box" id="player-two-box">
+          <h2 class="player-name">Player Two</h2>
+          <h2 class="player-score" id="player-two-score">0</h2>
+          <!-- Customize the player information and choices for Kiela -->
+          <!-- Example: Add Kiela-specific player actions and choices here -->
+        </div>
+      </div>
+
+      <form class="game-options">
+        <fieldset>
+          <legend>Game Options</legend>
+          <label for="game-speed">
+            Game Speed
+            <input id="game-speed" type="range" min="0" max="10" step="1" value="5">
+          </label>
+
+          <button class="game-button" id="btn-restart-game">Restart Game</button>
+
+          <label for="auto-restart">
+            <input id="auto-restart" type="checkbox"> Auto-Restart
+          </label>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="kiela.js"></script>
+  <!-- Include your Kiela-specific JavaScript file here -->
+</body>
+
+</html>
