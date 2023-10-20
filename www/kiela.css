@@ -92,7 +92,7 @@ body, h1, p {
 }
 
 /* Example: Style for seed animations */
-.seed-animation {
+.hole-animation {
   animation: growSeed 0.5s linear infinite;
 }
 
@@ -107,6 +107,35 @@ body, h1, p {
     transform: scale(1);
   }
 }
+
+
+
+
+
+
+
+.hole.seed {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #333;
+  background-color: #FAFAD2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+}
+
+.hole.seed::before {
+  content: '\2022'; /* Unicode character for a solid circle, you can replace it with an image or another character */
+  font-size: 40px; /* Adjust the size of the seed icon as needed */
+}
+
+
+
+
 
 
 
